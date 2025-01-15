@@ -18,7 +18,7 @@ class Classe{
         std::string getNomClasse();
         int getId();
         void ajouterEtudiant(Etudiant& etudiant);
-        void supprimerEtudiant(Etudiant& etudiant);
+        void supprimerEtudiant(std::string& nom, std::string& prenom);
         void afficherClasse();
 
 }
