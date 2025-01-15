@@ -40,15 +40,18 @@ void ECUE::setNomECUE(float nb)
     this->nbHeures = nb;
 }
 
-
-
 //Methodes pour affecter un enseigant a un ECUE
 void ECUE::ajouterEnseignant(Enseignant e)
 {
-    
+    enseignants.push_back(e);
 }
 
-void ECUE::spprimerEnseignant(Enseignant enseignant)
+void ECUE::spprimerEnseignant(Enseignant e)
 {
-    
+    for (size_t i = 0; i < enseignants.size(); ++i) {
+            if (enseignants[i].getNom() == e.getNom() && enseignants[i].getPrenom() == e.getPrenom()) {
+                enseignants.erase(enseignants.begin() + i);
+                std::cout << "Enseignant supprimé : " << e.getNom() << " " << e.getPrenom() << "\n";
+                return;
+            }
 }
