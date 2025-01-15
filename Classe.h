@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include "Etudiant.h"
 
 class Classe{
     private :
@@ -18,6 +19,7 @@ class Classe{
         int getId();
         void ajouterEtudiant(Etudiant& etudiant);
         void supprimerEtudiant(Etudiant& etudiant);
+        void afficherClasse();
 
 }
 #endif

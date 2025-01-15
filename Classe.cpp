@@ -1,4 +1,4 @@
-#include "classe.h"
+#include "Classe.h"
 
 Classe::Classe() {
     this->id = 0;
@@ -9,6 +9,16 @@ Classe::Classe(std::string nomClasse, int id)
 {
     this->nomClasse = nomClasse;
     this->id = id;
+}
+
+int Classe::getId()
+{
+    return this->id;
+}
+
+std::string Classe::getNomClasse()
+{
+    return this->nomClasse;
 }
 
 void Classe::ajouterEtudiant(Etudiant& etudiant)
@@ -30,7 +40,17 @@ void Classe::supprimerEtudiant(std::string& nom, std::string& prenom)
     std::cout << "Etudiant non trouvé: " << nom << " " << prenom << std::endl;
 }
 
-void Classe::afficherEtudiants() const 
+void Classe::afficherClasse() const 
 {
     std::cout << "Classe: " << nomClasse << " (ID: " << id << ")/n";
+    if (etudiants.empty())
+    {
+        std::cout << "Aucun étudiant dans la classe" << std::endl;
+    } else
+    {
+        for (liste = etudiants.begin; liste != etudiants.end(); liste++)
+        {
+            Etudiant:affiche();
+        }
+    }
 }
