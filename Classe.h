@@ -14,6 +14,7 @@ class Classe{
 
     public :
         Classe();
+        Classe(std::string nomClasse);
         Classe(std::string nomClasse, int id);
         std::string getNomClasse();
         int getId();

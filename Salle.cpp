@@ -3,11 +3,19 @@
 Salle::Salle() {
     this->etage = 0;
     this->numero = 0;
+    //this->id;
 }
 
 Salle::Salle(int etage, int numero) {
     this->etage = etage;
     this->numero = numero;
+    //this->id;
+}
+
+Salle::Salle(int etage, int numero, int id) {
+    this->etage = etage;
+    this->numero = numero;
+    this->id = id;
 }
 
 int Salle::getEtage() {

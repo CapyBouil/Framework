@@ -1,8 +1,14 @@
 #include "Classe.h"
 
 Classe::Classe() {
-    this->id = 0;
+    //this->id;
     this->nomClasse = "";
+}
+
+Classe::Classe(std::string nomClasse)
+{
+    this->nomClasse = nomClasse;
+    //this->id;
 }
 
 Classe::Classe(std::string nomClasse, int id)
